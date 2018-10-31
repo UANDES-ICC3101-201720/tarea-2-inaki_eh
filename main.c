@@ -24,6 +24,7 @@ void page_fault_handler( struct page_table *pt, int page )
 	faltas++;
 	int n_marco = page_table_get_nframes(pt);
 	char *physmem = page_table_get_physmem(pt);
+	srand(time(NULL));
 
 	//Se pone un marco inicial
 	int marco = 0;
@@ -31,19 +32,19 @@ void page_fault_handler( struct page_table *pt, int page )
 	//Se elige el algoritmo deseado, si esta mal escrito, se corta el programa
 	//Elige marco de forma aleatoria
 	if(!strcmp(algor,"rand")) {
-		marco = lrand48()%n_marco;
+		printf("%i\nmarco", n_marco);
+		marco = rand()%n_marco;
 		
 		printf("%d\n",marco);
 
 	//Se va eligiendo por orden de llenado, desde los primeros hasta los ultimos
 	}else if (!strcmp(algor,"fifo")){
 		marco = page%n_marco;
-		printf("%d\n",marco);
+		
 
 	}else if (!strcmp(algor,"custom")){
 		if (cambio == 0){
-			marco = lrand48();
-			marco = marco%n_marco;
+			marco = 0;
 			cambio = 1;
 			
 		}

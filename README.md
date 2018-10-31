@@ -13,7 +13,7 @@ Rand:
 Este algoritmo elige un marco al azar, si hay una pagina en dicho marco, esta es escrita en el disco y se cargara desde el disco la pagina nueva en dicho marco.
 
 Custom:
-Este algoritmo consta de la mezcla de los otros dos con una variable "bit" que va cambiando entre 0 y 1 cada vez que se utiliza uno de los 2 algoritmos.
+Este algoritmo trata de el uso de el primero y anclar al primer espacio, se va alternando con la variable cambio que va entre 0 y 1.
 
 Al iniciar el programa se encontrara la memoria de tamaño igual a la cantidad de marcos y vacia, todo se encontrara dentro de el disco y dependiendo de la cantidad de paginas ocurriran las escrituras al disco (si la cantidad de paginas es menor o igual a la de marcos no habra escritura al disco, pero si es mayor dependera del algoritmo usado la cantidad de lecturas al disco). Basicamente lo que hacen los algoritmos es definir el marco el cual se vera si esta vacio o ocupado para aplicar las distintas funciones incorporada en los distintos archivos entregados.
 
@@ -26,6 +26,7 @@ Viendo el funcionamiento, es de esperarse que el algoritmo "fifo" tenga la menor
 
 Los otros 2 al tener random incorporado puede leer un marco ocupado cuando puede haber otro desocupado, escribiendo al disco de manera innecesaria, aca no importaria la cantidad de paginas y la cantidad de marcos
 
+Al ir observando los distintos resultados de testeo se puede ver como la escritura, lectura y faltas de los distintos algoritmos van cambiando, pero el del fifo es el mas eficiente ya que tiene que hacer menos wapping entre el disco y la memoria.
 
 
 
