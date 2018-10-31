@@ -36,3 +36,5 @@ Iñaki Errázuriz
 PD: La invocacion de el programa es de el estilo "$./virtmem 100 10 rand sort" como sale en el enucnciado, ante la duda lo consulte con Claudio y me dijo que no hay problema.
 
 PD2: Cabe destacar que en el enunciado se pidio usar lrand48(), lo cual genera numeros aleatorios, pero genera siempre los mismos numeros aleatorios si se repiten las condiciones.
+
+PD3: Se que en el enunciado y en los multiples archivos salia que solo se debe modificar el main.c, pero tambien sale que se debe ejecutar usando los parametros -std=gnu11 -Wall -Werror los cuales no se encontraban en el makefile asi que ante la ambiguedad los agrege. El programa tambien funciona con el makefile original.
