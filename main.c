@@ -32,10 +32,8 @@ void page_fault_handler( struct page_table *pt, int page )
 	//Se elige el algoritmo deseado, si esta mal escrito, se corta el programa
 	//Elige marco de forma aleatoria
 	if(!strcmp(algor,"rand")) {
-		printf("%i\nmarco", n_marco);
-		marco = rand()%n_marco;
 		
-		printf("%d\n",marco);
+		marco = rand()%n_marco;
 
 	//Se va eligiendo por orden de llenado, desde los primeros hasta los ultimos
 	}else if (!strcmp(algor,"fifo")){
