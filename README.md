@@ -36,6 +36,3 @@ Iñaki Errázuriz
 PD: La invocacion de el programa es de el estilo "$./virtmem 100 10 rand sort" como sale en el enucnciado, ante la duda lo consulte con Claudio y me dijo que no hay problema.
 
 PD2: Cabe destacar que en el enunciado se pidio usar lrand48(), lo cual genera numeros aleatorios, pero genera siempre los mismos numeros aleatorios si se repiten las condiciones.
-
-/////////////////
-Programas -> cada uno carga la cantidad de paginas especificados en la memoria una sola vez en la cantidad de marcos posibles, y la forma que son cargados en el marco dependen del algoritmo dado.
